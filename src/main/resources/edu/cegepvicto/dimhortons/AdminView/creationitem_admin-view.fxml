@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="edu.cegepvicto.dimhortons.Admin.controllers.AjoutItemController"
+            fx:id="racineAjout"
+            stylesheets="@styles-admin.css"
+            styleClass="fond-app">
+
+    <!-- Barre de titre -->
+    <top>
+        <HBox styleClass="barre-titre" alignment="CENTER_LEFT" spacing="10">
+            <padding>
+                <Insets top="8" right="16" bottom="8" left="16"/>
+            </padding>
+            <children>
+                <Button text="Retour"
+                        fx:id="boutonRetour"
+                        onAction="#retourMenuAdmin"
+                        styleClass="bouton-retour"/>
+
+                <Label text="Dim Hortons – Admin" styleClass="titre-barre"/>
+                <Pane HBox.hgrow="ALWAYS"/>
+                <Label text="Responsable magasin" styleClass="label-utilisateur"/>
+            </children>
+        </HBox>
+    </top>
+
+    <!-- Contenu principal -->
+    <center>
+        <BorderPane>
+
+            <!-- GAUCHE : catégories -->
+            <left>
+                <VBox spacing="8"
+                      styleClass="panneau-categories">
+                    <padding>
+                        <Insets top="10" right="10" bottom="10" left="10"/>
+                    </padding>
+                    <children>
+
+                        <Label text="Catégories"
+                               styleClass="titre-section-gauche"/>
+
+                        <!-- Liste catégories -->
+                        <ListView fx:id="listeCategories"
+                                  prefWidth="160"
+                                  VBox.vgrow="ALWAYS"/>
+
+                    </children>
+                </VBox>
+            </left>
+
+            <!-- CENTRE : items existants + bouton  -->
+            <center>
+                <VBox alignment="TOP_CENTER" spacing="20">
+                    <padding>
+                        <Insets top="25" right="0" bottom="0" left="0"/>
+                    </padding>
+                    <children>
+
+                        <Label text="Items existants"
+                               styleClass="titre-section-centre"/>
+
+                        <!-- Grille d'items  -->
+                        <HBox alignment="CENTER">
+                            <children>
+                                <ScrollPane prefWidth="500"
+                                            maxWidth="500"
+                                            prefViewportHeight="220"
+                                            fitToWidth="true"
+                                            hbarPolicy="NEVER"
+                                            fx:id="scrollItems">
+                                    <content>
+                                        <TilePane fx:id="grilleItems"
+                                                  hgap="10" vgap="10"
+                                                  prefColumns="3"
+                                                  maxWidth="500"
+                                                  styleClass="grille-items">
+                                            <!-- cartes d’item  -->
+                                        </TilePane>
+                                    </content>
+                                </ScrollPane>
+                            </children>
+                        </HBox>
+
+                        <!-- Bouton  -->
+                        <Button fx:id="boutonAjout"
+                                text="+"
+                                onAction="#basculerFormulaire"
+                                styleClass="bouton-ajout-flottant"/>
+
+                    </children>
+                </VBox>
+            </center>
+
+            <!-- DROITE : formulaire de création d'item -->
+            <right>
+                <VBox fx:id="panneauFormulaire"
+                      spacing="8"
+                      styleClass="panneau-formulaire">
+                    <padding>
+                        <Insets top="12" right="12" bottom="12" left="12"/>
+                    </padding>
+                    <children>
+
+                        <Label text="Créer un item" styleClass="titre-formulaire"/>
+
+                        <Label text="Nom" styleClass="libelle-champ"/>
+                        <TextField fx:id="champNom"/>
+
+                        <Label text="Description" styleClass="libelle-champ"/>
+                        <TextArea fx:id="champDescription" prefRowCount="3"/>
+
+                        <Label text="Prix" styleClass="libelle-champ"/>
+                        <TextField fx:id="champPrix"/>
+
+                        <Label text="Calories (optionnel)" styleClass="libelle-champ"/>
+                        <TextField fx:id="champCalories"/>
+
+                        <Label text="Image (URL ou chemin)" styleClass="libelle-champ"/>
+                        <TextField fx:id="champImageUrl"/>
+
+                        <Label text="Catégorie" styleClass="libelle-champ"/>
+                        <ComboBox fx:id="comboCategorie" prefWidth="200"/>
+
+                        <Label text="Sélectionnez les ingrédients :" styleClass="label-info" />
+                        <ListView fx:id="listeIngredients"
+                                  prefHeight="200"
+                                  styleClass="liste-ingredients">
+                        </ListView>
+
+
+                        <Label fx:id="labelErreur" styleClass="message-erreur"/>
+                        <Label fx:id="labelConfirmation" styleClass="message-confirmation"/>
+
+                        <HBox spacing="10" alignment="CENTER_RIGHT">
+                            <children>
+                                <Button text="Annuler"
+                                        onAction="#annulerCreation"
+                                        styleClass="bouton-annuler"/>
+                                <Button text="Confirmer"
+                                        fx:id="boutonConfirmer"
+                                        onAction="#confirmerCreation"
+                                        styleClass="bouton-confirmer"/>
+                            </children>
+                        </HBox>
+
+                    </children>
+                </VBox>
+            </right>
+
+        </BorderPane>
+    </center>
+
+</BorderPane>

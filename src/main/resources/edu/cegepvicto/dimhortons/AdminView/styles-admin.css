@@ -1,0 +1,263 @@
+/* @author OpenAI. (2025). ChatGPT (version 5.1 novembre 2025) [Modèle massif de
+ *         langage]. https://chatgpt.com
+ */
+
+.fond-app {
+    -fx-background-color: #f5f5f5;
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* ---------- Ecran 1 : menu ---------- */
+
+.titre-principal {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+}
+
+.carte-menu,
+.carte-menu-selectionnee {
+    -fx-padding: 16;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-border-color: #cccccc;
+    -fx-background-color: white;
+}
+
+.carte-menu-selectionnee {
+    -fx-border-color: #ff4081;
+}
+
+.carte-libelle {
+    -fx-font-size: 14px;
+}
+
+.bouton-carte-menu {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-text-fill: #333333;
+}
+
+.bouton-profil {
+    -fx-min-width: 36;
+    -fx-min-height: 36;
+    -fx-background-radius: 18;
+    -fx-background-color: #ffffff;
+    -fx-border-color: #0077ff;
+}
+
+/* ---------- Barre de titre ---------- */
+
+.barre-titre {
+    -fx-background-color: #d50000;
+    -fx-alignment: CENTER_LEFT;
+}
+
+.titre-barre {
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.label-utilisateur {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+}
+
+/* ---------- Panneaux gauche / droite ---------- */
+
+.panneau-categories {
+    -fx-background-color: #ffffff;
+    -fx-pref-width: 180;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0, 0, 1);
+}
+
+.titre-section-gauche {
+    -fx-font-weight: bold;
+}
+
+.panneau-formulaire {
+    -fx-background-color: #ffffff;
+    -fx-pref-width: 260;
+    -fx-spacing: 6;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0, 0, 1);
+}
+
+.titre-formulaire {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 6 0;
+}
+
+.libelle-champ {
+    -fx-font-size: 12px;
+}
+
+.message-erreur {
+    -fx-text-fill: #d50000;
+    -fx-font-size: 12px;
+}
+
+/* ---------- Boutons ---------- */
+
+.bouton-annuler {
+    -fx-background-color: #d32f2f;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.bouton-confirmer {
+    -fx-background-color: #2e7d32;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.bouton-annuler:hover {
+    -fx-background-color: #b71c1c;
+}
+
+.bouton-confirmer:hover {
+    -fx-background-color: #1b5e20;
+}
+
+.bouton-secondaire {
+    -fx-background-color: #eeeeee;
+}
+
+.bouton-ajout-flottant {
+    -fx-background-color: #ff4081;
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 20;
+    -fx-min-width: 40;
+    -fx-min-height: 40;
+}
+
+/* ---------- Confirmation ---------- */
+
+.label-confirmation {
+    -fx-background-color: #d50000;
+    -fx-text-fill: white;
+    -fx-padding: 10 20 10 20;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6;
+}
+
+/* Fond général de l'appli admin */
+.fond-app {
+    -fx-background-color: #f5f5f5;
+}
+
+/* Titre "Bienvenue!" */
+.titre-menu {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+/* Boutons rouges du menu */
+.bouton-menu,
+.bouton-menu-important {
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-padding: 12 30 12 30;
+    -fx-font-size: 14px;
+    -fx-font-weight: normal;
+    -fx-cursor: hand;
+}
+
+/* Boutons "Rapports" / "Inventaire" */
+.bouton-menu {
+    -fx-background-color: #ff6a3d;
+    -fx-border-color: #d94b22;
+    -fx-border-width: 2;
+    -fx-text-fill: white;
+}
+
+/* Bouton "Ajouter item"
+.bouton-menu-important {
+    -fx-background-color: #ff6a3d;
+    -fx-border-color: #d94b22;
+    -fx-border-width: 2;
+    -fx-text-fill: white;
+}
+
+/* Effet hover */
+.bouton-menu:hover,
+.bouton-menu-important:hover {
+    -fx-background-color: #ff4b22;
+}
+
+/* Petit carré profil en bas à gauche */
+.bouton-profil {
+    -fx-pref-width: 35;
+    -fx-pref-height: 35;
+    -fx-background-color: transparent;
+    -fx-border-color: #007bff;
+    -fx-border-width: 2;
+    -fx-background-radius: 4;
+    -fx-border-radius: 4;
+}
+
+.message-erreur {
+    -fx-text-fill: #d93025; /* rouge */
+    -fx-font-size: 12px;
+}
+
+.message-confirmation {
+    -fx-text-fill: #188038; /* vert */
+    -fx-font-size: 12px;
+}
+
+.carte-item {
+    -fx-padding: 8;
+    -fx-background-color: white;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-border-color: #dddddd;
+    -fx-border-width: 1;
+    -fx-pref-width: 120;
+}
+
+.item-nom {
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+}
+
+.item-prix {
+    -fx-text-fill: #555555;
+    -fx-font-size: 11px;
+}
+
+.titre-section-centre {
+    -fx-font-size: 13px;
+    -fx-text-fill: #555555;
+}
+
+.grille-items {
+    -fx-padding: 5;
+}
+
+.bouton-ajout-flottant {
+    -fx-background-radius: 20;
+    -fx-pref-width: 32;
+    -fx-pref-height: 32;
+    -fx-font-size: 18px;
+    -fx-background-color: #ff3c78;
+    -fx-text-fill: white;
+    -fx-border-color: transparent;
+    -fx-cursor: hand;
+}
+
+.bouton-ajout-flottant:hover {
+    -fx-background-color: #ff225f;
+}
+
+.titre-section-centre {
+    -fx-font-size: 13px;
+    -fx-text-fill: #555555;
+}
+
+.grille-items {
+    -fx-padding: 5;
+}

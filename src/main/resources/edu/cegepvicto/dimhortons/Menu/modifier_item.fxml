@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="edu.cegepvicto.dimhortons.Menu.ModifierItemController"
+            stylesheets="@/edu/cegepvicto/dimhortons/styles.css"
+            styleClass="conteneur-principal">
+
+    <!-- En-tête -->
+    <top>
+        <HBox spacing="10"
+              alignment="CENTER_LEFT"
+              styleClass="barre-entete">
+            <children>
+                <Label fx:id="labelTitre"
+                       text="Modifier les ingrédients"
+                       styleClass="topbar-title"/>
+            </children>
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+        </HBox>
+    </top>
+
+    <!-- Contenu central -->
+    <center>
+        <VBox spacing="15">
+            <padding>
+                <Insets top="15" right="15" bottom="15" left="15"/>
+            </padding>
+            <children>
+                <!-- Liste INGRÉDIENTS -->
+                <ScrollPane fitToWidth="true" fitToHeight="true">
+                    <content>
+                        <VBox fx:id="vboxIngredients" spacing="6"/>
+                    </content>
+                </ScrollPane>
+
+                <!-- TITRE EXTRAS -->
+                <Label text="Extras disponibles"
+                       style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-padding: 10 0 5 0;"/>
+
+                <!-- Liste EXTRAS -->
+                <ScrollPane fitToWidth="true" fitToHeight="true">
+                    <content>
+                        <VBox fx:id="vboxExtras" spacing="6"/>
+                    </content>
+                </ScrollPane>
+            </children>
+        </VBox>
+    </center>
+
+    <!-- Barre d'action -->
+    <bottom>
+        <HBox spacing="10"
+              alignment="CENTER_RIGHT"
+              styleClass="barre-panier">
+            <children>
+                <Button text="Annuler"
+                        onAction="#handleAnnuler"
+                        styleClass="bouton-action-panier"/>
+
+                <Button text="Enregistrer"
+                        onAction="#handleEnregistrer"
+                        styleClass="bouton-action-panier"/>
+            </children>
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+        </HBox>
+    </bottom>
+
+</BorderPane>

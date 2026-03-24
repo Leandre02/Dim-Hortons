@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="edu.cegepvicto.dimhortons.cuisine.Controller.CuisineController"
+            stylesheets="@styles-cuisine.css">
+
+    <!-- BARRE DU HAUT -->
+    <top>
+        <HBox spacing="12" styleClass="topbar">
+            <children>
+                <Button fx:id="boutonMenu" text="☰" styleClass="icon-btn" onAction="#AfficherMenu"/>
+                <Label fx:id="labelTitreCuisine" styleClass="topbar-title" HBox.hgrow="ALWAYS"/>
+
+                <Button fx:id="boutonFiltre" text="Filtrer" onAction="#filtrerCommandes" styleClass="pill-btn"/>
+                <Button fx:id="boutonLangue" onAction="#basculerLangue"/>
+            </children>
+            <padding><Insets top="10" right="16" bottom="10" left="16"/></padding>
+        </HBox>
+    </top>
+
+    <!-- COLONNE GAUCHE : STOCK -->
+    <left>
+        <VBox fx:id="panneauStock" styleClass="sidebar">
+            <children>
+                <Label fx:id="labelStock" styleClass="sidebar-title"/>
+                <GridPane fx:id="grilleStock" hgap="8" vgap="6" styleClass="stock-grid">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="ALWAYS"/>
+                        <ColumnConstraints halignment="RIGHT" minWidth="40"/>
+                    </columnConstraints>
+                </GridPane>
+            </children>
+        </VBox>
+    </left>
+
+    <!-- ZONE CENTRALE : LISTE DES COMMANDES EN CARTES -->
+    <center>
+        <ScrollPane fitToWidth="true" hbarPolicy="NEVER">
+            <content>
+                <FlowPane fx:id="zoneCommandes" hgap="14" vgap="14" prefWrapLength="900">
+                    <padding>
+                        <Insets top="16" right="16" bottom="16" left="16"/>
+                    </padding>
+                </FlowPane>
+            </content>
+        </ScrollPane>
+    </center>
+
+    <!-- Pied de page -->
+    <bottom>
+        <HBox styleClass="barre-titre" alignment="CENTER_LEFT" spacing="10">
+            <padding>
+                <Insets top="8" right="16" bottom="8" left="16"/>
+            </padding>
+            <children>
+                <Button text="Retour"
+                        fx:id="boutonRetour"
+                        onAction="#retourMenuAdmin"
+                        styleClass="bouton-retour"/>
+            </children>
+        </HBox>
+    </bottom>
+
+</BorderPane>

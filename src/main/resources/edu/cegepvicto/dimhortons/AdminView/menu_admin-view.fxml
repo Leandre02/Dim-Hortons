@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="edu.cegepvicto.dimhortons.Admin.controllers.MenuAdminController"
+            fx:id="racineMenu"
+            stylesheets="@styles-admin.css"
+            styleClass="fond-app">
+
+    <!-- Contenu principal -->
+    <center>
+        <VBox alignment="CENTER" spacing="25">
+            <children>
+
+                <Label text="Bienvenue!"
+                       styleClass="titre-menu"/>
+
+                <HBox alignment="CENTER" spacing="30">
+                    <children>
+
+                        <Button text="Cuisine"
+                                fx:id="boutonCuisine"
+                                onAction="#ouvrirCuisine"
+                                styleClass="bouton-menu-important"/>
+
+
+
+                        <Button text="Ajouter item"
+                                fx:id="boutonAjouterItem"
+                                onAction="#ouvrirAjoutItem"
+                                styleClass="bouton-menu-important"/>
+
+                        <Button text="Supprimer item"
+                                fx:id="boutonSupprimerItem"
+                                onAction="#ouvrirSuppressionItem"
+                                styleClass="bouton-menu-important"/>
+
+                    </children>
+                </HBox>
+
+            </children>
+        </VBox>
+    </center>
+
+    <!-- Pied de page -->
+    <bottom>
+        <HBox styleClass="barre-titre" alignment="CENTER_LEFT" spacing="10">
+            <padding>
+                <Insets top="8" right="16" bottom="8" left="16"/>
+            </padding>
+            <children>
+                <Button text="Menu principal"
+                        fx:id="boutonRetourMenuPrincipal"
+                        onAction="#retourMenuPrincipal"
+                        styleClass="bouton-menu"/>
+            </children>
+        </HBox>
+    </bottom>
+
+</BorderPane>

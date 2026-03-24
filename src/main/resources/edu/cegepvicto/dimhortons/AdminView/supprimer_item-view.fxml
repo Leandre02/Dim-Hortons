@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="edu.cegepvicto.dimhortons.Admin.controllers.SupprimerItemController"
+            stylesheets="@styles-admin.css"
+            styleClass="fond-app">
+
+    <top>
+        <HBox styleClass="barre-entete">
+            <Label text="Suppression d’un item du menu"
+                   styleClass="topbar-title"/>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox spacing="10" styleClass="contenu-admin">
+            <Label text="Sélectionner un item à supprimer"/>
+            <ListView fx:id="listViewItems"/>
+            <Label fx:id="labelMessage"/>
+        </VBox>
+    </center>
+
+    <bottom>
+        <HBox spacing="10" styleClass="barre-actions">
+            <Button text="Retour" onAction="#handleRetour"/>
+            <Button text="Supprimer" onAction="#handleSupprimer"
+                    styleClass="danger"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>
+
