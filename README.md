@@ -16,9 +16,9 @@
 | Nom / Name | Contribution |
 |---|---|
 | **Léandre Kanmegne** | Kitchen order management interface · Admin item management · Unit tests |
-| Justin Chaput | — |
-| Nathan Grondin | — |
-| Rachid Touil | — |
+| Justin Chaput | Menu & cart |
+| Nathan Grondin | User login & Payment processing |
+| Rachid Touil | Modify Menu and delete items |
 
 **Version:** 0.0.31 · **Date:** December 15, 2025
 
